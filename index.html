@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign-up Form - The Odin Project</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <!-- Sidebar with logo and background -->
+      <div class="sidebar">
+        <div class="logo-banner">
+          <img src="assets/odin-lined.png" alt="Odin logo" class="odin-logo" />
+          <h1>ODIN</h1>
+        </div>
+        <div class="image-credit">
+          Photo by
+          <a href="https://unsplash.com/@haliewestphoto" target="_blank"
+            >Halie West</a
+          >
+          on <a href="https://unsplash.com" target="_blank">Unsplash</a>
+        </div>
+      </div>
+
+      <!-- Main content area -->
+      <div class="main-content">
+        <!-- Form header -->
+        <div class="form-header">
+          <p class="intro-text">
+            This is not a real online service! You know you need something like
+            this in your life to help you realize your deepest dreams. Sign up
+            <em>now</em> to get started.
+          </p>
+          <p class="intro-text">You know you want to.</p>
+          <p class="call-to-action">Let's do this!</p>
+        </div>
+
+        <!-- Form section -->
+        <form id="signup-form" class="signup-form" novalidate>
+          <div class="form-section">
+            <h2>Create Your Account</h2>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="first-name">FIRST NAME</label>
+                <input
+                  type="text"
+                  id="first-name"
+                  name="first-name"
+                  placeholder="Thor"
+                  pattern="[A-Za-z]{2,}"
+                  title="First name must be at least 2 letters"
+                />
+                <span class="validation-icon"></span>
+                <span class="error-message"
+                  >First name must be at least 2 letters</span
+                >
+              </div>
+
+              <div class="form-group">
+                <label for="last-name">LAST NAME</label>
+                <input
+                  type="text"
+                  id="last-name"
+                  name="last-name"
+                  placeholder="Odinson"
+                  pattern="[A-Za-z]{2,}"
+                  title="Last name must be at least 2 letters"
+                />
+                <span class="validation-icon"></span>
+                <span class="error-message"
+                  >Last name must be at least 2 letters</span
+                >
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="email">EMAIL</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="thor@asgard.com"
+                  title="Please enter a valid email address"
+                />
+                <span class="validation-icon"></span>
+                <span class="error-message"
+                  >Please enter a valid email address</span
+                >
+              </div>
+
+              <div class="form-group">
+                <label for="phone">PHONE NUMBER</label>
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  placeholder="555-123-4567"
+                  pattern="[0-9\-]{10,}"
+                  title="Phone number must be at least 10 digits"
+                />
+                <span class="validation-icon"></span>
+                <span class="error-message"
+                  >Phone number must be at least 10 digits</span
+                >
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="password">PASSWORD</label>
+                <input
+                  type="password"
+                  id="password"
+                  name="password"
+                  pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d@$!%*#?&]{8,}$"
+                  title="Password must be at least 8 characters with at least one letter and one number"
+                />
+                <span class="validation-icon"></span>
+                <span class="error-message"
+                  >Password must be at least 8 characters with at least one
+                  letter and one number</span
+                >
+              </div>
+
+              <div class="form-group">
+                <label for="confirm-password">CONFIRM PASSWORD</label>
+                <input
+                  type="password"
+                  id="confirm-password"
+                  name="confirm-password"
+                  pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d@$!%*#?&]{8,}$"
+                  title="Please confirm your password"
+                />
+                <span class="validation-icon"></span>
+                <span class="error-message">Please confirm your password</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Form footer with button -->
+          <div class="form-footer">
+            <button type="submit" class="create-account-btn">
+              Create Account
+            </button>
+            <p class="login-link">
+              Already have an account? <a href="#">Log in</a>
+            </p>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
